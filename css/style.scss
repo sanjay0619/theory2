@@ -1,0 +1,495 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    font-size: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*container*/
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/*flex*/
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/*variable*/
+
+$mycolor:#4e82be;
+
+/*second and last*/
+
+
+/*style in h2*/
+
+@mixin heading {
+    color: $mycolor;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+
+/*second and last*/
+
+
+/*style in p*/
+
+@mixin para {
+    color: gray;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 90;
+}
+
+
+/*only for second*/
+
+
+/*style in btn*/
+
+.btn {
+    width: 60px;
+    height: 30px;
+    background-color: $mycolor;
+    color: white;
+    border: none;
+}
+
+
+/*hedear*/
+
+header {
+    width: 100%;
+    height: 70vh;
+    background-image: url(../img/theory/dd.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    h3 {
+        width: 50%;
+    }
+    .toggle {
+        display: none;
+        border: none;
+        background: none;
+        font-size: 1.6rem;
+    }
+    ul {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        li {
+            list-style: none;
+            margin-left: 2rem;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/*banner*/
+
+.banner {
+    width: 100%;
+    text-align: center;
+    padding: 4% 0;
+    h1 {
+        font-size: 3.5rem;
+    }
+    p {
+        margin-top: -1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+
+/*second-part*/
+
+.second-part {
+    padding: 4% 0;
+    .second {
+        width: 28%;
+        h2 {
+            @include heading;
+        }
+        p {
+            @include para;
+        }
+    }
+    .border {
+        border-right: 1px solid gray;
+    }
+}
+
+
+/*boxes*/
+
+main {
+    background-color: $mycolor;
+    .boxes {
+        text-align: center;
+        color: white;
+        padding: 5% 0 8% 0;
+        h2 {
+            width: 100%;
+            font-size: 2rem;
+        }
+        p {
+            width: 100%;
+            margin-top: -1rem;
+            font-size: 0.8rem;
+        }
+        .box {
+            width: 22%;
+            margin-top: 3rem;
+            border: 2px solid white;
+            padding: 5% 0;
+            img {
+                width: 60%;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+
+/*last-part*/
+
+.last-part {
+    padding: 4% 0;
+    h2 {
+        width: 100%;
+        font-size: 2rem;
+        color: $mycolor;
+        text-align: center;
+    }
+    .p {
+        width: 100%;
+        margin-top: -1rem;
+        font-size: 0.8rem;
+        color: gray;
+        text-align: center;
+    }
+    .same {
+        width: 48%;
+        padding: 4% 0;
+        img {
+            width: 100%;
+        }
+        h3 {
+            @include heading;
+            text-align: left;
+        }
+        p {
+            @include para;
+            text-align: left;
+        }
+    }
+}
+
+
+/*footer*/
+
+footer {
+    hr {
+        width: 100%;
+        border: none;
+        background-color: gray;
+        height: 1px;
+    }
+    p {
+        width: 50%;
+        color: gray;
+        font-size: 0.8rem;
+    }
+    .social {
+        width: 50%;
+        text-align: right;
+        span {
+            color: $mycolor;
+            margin-left: 2rem;
+            padding: 2% 0;
+        }
+    }
+}
+
+
+/*media*/
+
+@media (max-width:1150px) {
+    .container {
+        width: 82%;
+    }
+}
+
+@media (max-width:1100px) {
+    .container {
+        width: 82%;
+    }
+}
+
+@media (max-width:800px) {
+    .banner {
+        margin-top: 3rem;
+    }
+    .second-part {
+        .second {
+            h2 {
+                font-size: 1.2rem
+            }
+            p {
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    .banner {
+        margin-top: 4rem;
+    }
+    /*second*/
+    .second-part {
+        .second {
+            width: 100%;
+            text-align: center;
+            padding: 4% 0;
+            h2 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+        .border {
+            border: none;
+        }
+    }
+    /*boxes*/
+    main {
+        .boxes {
+            h2 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            .box {
+                width: 60%;
+                padding: 20% 1%;
+                margin: 0 auto;
+                margin-top: 3rem;
+                img {
+                    width: 50%;
+                }
+                h4 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    /*last-part*/
+    .last-part {
+        h2 {
+            font-size: 3rem;
+        }
+        .p {
+            font-size: 1.2rem;
+        }
+        .same {
+            width: 100%;
+            padding: 7% 0;
+            text-align: center;
+            img {
+                width: 100%;
+            }
+            h3 {
+                text-align: center;
+                font-size: 1.7rem;
+            }
+            p {
+                text-align: center;
+                font-size: 1.1rem;
+                line-height: 2.2rem;
+            }
+            .btn {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+    /*footer*/
+    footer {
+        .social {
+            span {
+                padding: 5% 0;
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    header {
+        .toggle {
+            display: block;
+            color: white;
+            background: none;
+            border: none;
+        }
+        .toggle:hover {
+            font-size: 2rem;
+            background: none;
+            border: none;
+        }
+        ul {
+            width: 100%;
+            display: none;
+            margin-left: -4.8rem;
+            li {
+                width: 22%;
+                float: left;
+                padding: 2%;
+                a:hover {
+                    background-color: violet;
+                    padding: 6%;
+                }
+            }
+        }
+    }
+    /*banner*/
+    .banner {
+        margin-top: 5rem;
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+    /*last-part*/
+    .last-part {
+        .same {
+            text-align: center;
+        }
+    }
+    /*footer*/
+    footer {
+        text-align: center;
+        p {
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        .social {
+            width: 100%;
+            text-align: center;
+            span {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .banner {
+        margin-top: 7rem;
+        h1 {
+            font-size: 2.7rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .banner {
+        margin-top: 8rem;
+        h1 {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 0.7rem;
+            margin-top: -0.2rem;
+        }
+    }
+    .second-part {
+        .second {
+            h2 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+        .border {
+            border: none;
+        }
+    }
+    /*boxes*/
+    main {
+        .boxes {
+            h2 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+    /*last-part*/
+    .last-part {
+        h2 {
+            font-size: 2.5rem;
+        }
+        .p {
+            font-size: 1rem;
+        }
+        .same {
+            h3 {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            p {
+                text-align: center;
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+            .btn {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+    /*footer*/
+    footer {
+        p {
+            font-size: 0.8rem;
+        }
+        .social {
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+}
